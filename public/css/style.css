@@ -61,13 +61,44 @@ main {
 	justify-content: space-between;
 }
 
-/* Homepage Table */
+/* Homepage */
 .table-container {
 	overflow: scroll;
 }
 
 .table-container td {
 	min-width: 12rem;
+}
+
+/* Login */
+.login {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+.login > div {
+	width: 100%;
+	display: flex;
+	flex: 1 0 auto;
+	margin: 0;
+}
+
+.card-login {
+	padding: 1.5rem;
+}
+
+.card-login .row {
+	margin-bottom: 0;
+}
+
+.card-login h3 {
+	margin-top: 0;
+}
+
+.card-login .btn {
+	display: block;
+	width: 100%;
 }
 
 /* Parking Space Template */

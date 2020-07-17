@@ -8,7 +8,7 @@
     <title>Ocean Vistas Parking Registry</title>
 </head>
 <body>
-    <main>
+    <main {{#if login}} class="login" {{/if}}>
         {{> _nav}}
         {{{body}}}
     </main>
