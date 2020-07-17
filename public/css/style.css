@@ -1,0 +1,90 @@
+/* Global Styles */
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+/* Hero Styles */
+.hero {
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero--login,
+.hero--space {
+	min-height: 200px;
+}
+
+.hero--homepage {
+	background-image: url('../img/ocean-vistas-hero.jpg');
+	min-height: 350px !important;
+}
+
+.hero--login {
+	background-image: url('../img/ocean-vistas-hero.jpg');
+	background-position: bottom;
+}
+
+.hero--space {
+	background-image: url('../img/ocean-vistas-hero.jpg');
+}
+
+.hero--user {
+	background-image: url('../img/ocean-vistas-hero.jpg');
+}
+
+.hero__container {
+	background-color: hsla(0, 0%, 96%, 85%);
+	padding: 3rem 2rem;
+	margin: 2rem 0;
+}
+
+.hero__container h1,
+.hero__container h3 {
+	margin-top: 0;
+}
+
+.hero__container h1 {
+	margin-bottom: 0;
+}
+
+.hero--user .hero__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Homepage Table */
+.table-container {
+	overflow: scroll;
+}
+
+.table-container td {
+	min-width: 12rem;
+}
+
+/* Parking Space Template */
+.space-owner {
+	margin-top: 1rem !important;
+}
+
+.space-owner img,
+.space-owner a {
+	display: block;
+}
+
+.space-owner img {
+	margin: auto;
+}
+
+.space-owner p {
+	text-align: center;
+	margin-top: 0.75rem !important;
+}

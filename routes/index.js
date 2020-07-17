@@ -4,7 +4,7 @@ const router = express.Router();
 // @desc    Show Parking registry for that day
 // @route   GET /
 router.get('/', (req, res) => {
-	res.send('hello world - main');
+	res.render('index');
 });
 
 // @desc    Show Dashboard of Users owned Parking Spots
