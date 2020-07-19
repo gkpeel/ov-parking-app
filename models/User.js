@@ -25,6 +25,10 @@ const UserSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'Vehicle',
 	},
+	userType: {
+		type: String,
+		default: 'editor',
+	},
 });
 
 const User = mongoose.model('User', UserSchema);

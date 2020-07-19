@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col s12 hero hero--login">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 offset-m2 m8 offset-l3 l6">
+                    <div class="card card-login">
+                        <h3 class="card-title center-align">Ocean Vistas Registration</h3>
+                        <form action="/register" method="POST">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field">
+                                        <input name="fullName" id="name-register" type="text" class="validate" value="{{fullName}}" required>
+                                        <label for="name-register">Full Name*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input name="contactNumber" id="contact-register" type="text" class="validate" value="{{contactNumber}}" required>
+                                        <label for="contact-register">Contact Number*</label>
+                                    </div>
+                                    <div id="website" class="input-field">
+                                        <input name="website" id="website-register" type="text" class="validate">
+                                        <label for="website-register">Website</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input name="email" id="email-register" type="email" class="validate" value="{{email}}" required>
+                                        <label for="email-register">Email*</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input name="password" id="password-register" type="password" class="validate" value="{{password}}" required>
+                                        <label for="password-register">Password*</label>
+                                    </div> 
+                                    <div class="input-field">
+                                        <input name="password2" id="password-confirm" type="password" class="validate" value="{{password2}}" required>
+                                        <label for="password-confirm">Confirm Password*</label>
+                                    </div> 
+                                    <button type="submit" value="Register" class="btn green darken-1 waves-effect waves-light">Register</button>
+                                    <p class="center-align"><small><em>Having trouble logging in? Send an email to <a href="mailto:gkpeel@gmail.com">Geoff Peel</a></em></small></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

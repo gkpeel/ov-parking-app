@@ -1,11 +1,12 @@
 const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
+const passport = require('passport');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
-const passport = require('passport');
+const flash = require('connect-flash');
+const morgan = require('morgan');
 const connectDB = require('./config/db');
 const MongoStore = require('connect-mongo')(session);
 
@@ -20,24 +21,27 @@ connectDB();
 const app = express();
 
 // Bodyparser
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Logging
 if (process.env.NODE_ENV === 'development') {
 	app.use(morgan('dev'));
 }
 
+// Handlebar Helpers
+const { anyTrue } = require('./helpers/hbs');
+
 // Handlebars
-app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
+app.engine('.hbs', exphbs({ helpers: { anyTrue }, defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
 
 // Sessions
 app.use(
 	session({
 		secret: 'vistavista',
-		resave: false,
-		saveUninitialized: false,
-		store: new MongoStore({ mongooseConnection: mongoose.connection }),
+		resave: true,
+		saveUninitialized: true,
 	})
 );
 
@@ -45,9 +49,16 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Connect flash
+app.use(flash());
+
 // Global vars
 app.use((req, res, next) => {
 	res.locals.user = req.user || null;
+	res.locals.success_msg = req.flash('success_msg');
+	res.locals.error_msg = req.flash('error_msg');
+	res.locals.errors = req.flash('errors');
+	console.log(res.locals);
 	next();
 });
 

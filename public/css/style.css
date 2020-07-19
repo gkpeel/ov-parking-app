@@ -9,6 +9,15 @@ main {
 	flex: 1 0 auto;
 }
 
+.ov-toast {
+	max-width: 300px;
+	font-size: 0.75rem;
+}
+
+.ov-toast.yellow {
+	color: rgba(0, 0, 0, 0.87);
+}
+
 /* Hero Styles */
 .hero {
 	background-size: cover;
@@ -64,20 +73,35 @@ main {
 /* Homepage */
 .table-container {
 	overflow: scroll;
+	max-height: 500px;
+}
+
+.table-container table {
+	position: relative;
+}
+
+.table-container thead {
+	font-weight: bold;
+}
+
+.table-container tbody {
+	margin-top: 52px;
 }
 
 .table-container td {
 	min-width: 12rem;
 }
 
-/* Login */
-.login {
+/* Login/Registration pages */
+.login,
+.register {
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
 }
 
-.login > div {
+.login > div,
+.register > div {
 	width: 100%;
 	display: flex;
 	flex: 1 0 auto;
@@ -99,6 +123,10 @@ main {
 .card-login .btn {
 	display: block;
 	width: 100%;
+}
+
+#website {
+	display: none;
 }
 
 /* Parking Space Template */

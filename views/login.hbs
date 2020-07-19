@@ -9,15 +9,18 @@
                             <div class="row">
                                 <div class="col s12">
                                     <div class="input-field">
-                                        <input id="email-login" type="email" class="validate" required>
+                                        <input name="email" id="email-login" type="email" class="validate" value="{{email}}" required>
                                         <label for="email-login">Email</label>
                                     </div>
                                     <div class="input-field">
-                                        <input id="password-login" type="password" class="validate" required>
+                                        <input name="password" id="password-login" type="password" class="validate" required>
                                         <label for="password-login">Password</label>
                                     </div> 
                                     <button type="submit" class="btn green darken-1 waves-effect waves-light">Log In</button>
-                                    <p class="center-align"><small><em>Having trouble logging in? Send an email to <a href="mailto:gkpeel@gmail.com">Geoff Peel</a></em></small></p>
+                                    <p class="center-align">
+                                        <small><em>Don't have an account? <a href="/register">Register Here</a></em></small><br>
+                                        <small><em>Having trouble logging in? Send an email to <a href="mailto:gkpeel@gmail.com">Geoff Peel</a></em></small>
+                                    </p>
                                 </div>
                             </div>
                         </form>

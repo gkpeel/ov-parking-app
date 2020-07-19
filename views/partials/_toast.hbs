@@ -1,0 +1,14 @@
+
+{{#if success_msg}}
+    M.toast({displayLength: 10000, html: '{{{success_msg}}}', classes: 'ov-toast green'})
+{{/if}}
+
+{{#if error_msg}}
+    M.toast({html: '{{{error_msg}}}', classes: 'ov-toast red'})
+{{/if}}
+
+{{#if errors}}
+    {{#each errors}}
+        M.toast({displayLength: 10000, html: '{{{this.msg}}}', classes: 'ov-toast yellow'})
+    {{/each}}
+{{/if}}

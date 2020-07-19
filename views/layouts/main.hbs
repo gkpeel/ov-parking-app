@@ -8,11 +8,17 @@
     <title>Ocean Vistas Parking Registry</title>
 </head>
 <body>
-    <main {{#if login}} class="login" {{/if}}>
+    <main 
+        {{#if login}} class="login" {{/if}}
+        {{#if register}} class="register" {{/if}}
+    >
         {{> _nav}}
         {{{body}}}
     </main>
     {{> _footer}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        {{> _toast}}
+    </script>
 </body>
 </html>
